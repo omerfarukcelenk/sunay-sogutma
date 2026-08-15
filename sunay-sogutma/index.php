@@ -8,6 +8,12 @@ $phoneTel = '+905077322590';
 $email = 'info@sunaysogutma.com';
 $whatsappUrl = 'https://wa.me/905077322590?text=' . rawurlencode('Merhaba, Sunay Soğutma hizmetleri hakkında bilgi almak istiyorum.');
 $city = 'Mersin';
+$district = 'Yenişehir';
+$streetAddress = 'Palmiye Mah. 1223 Sk. Milas Apt. No: 4/A';
+$fullAddress = $streetAddress . ' ' . $district . '/' . $city;
+$mapsQuery = rawurlencode('Palmiye Mahallesi 1223 Sokak Milas Apartmanı No:4 Yenişehir Mersin');
+$mapsEmbedUrl = 'https://maps.google.com/maps?q=' . $mapsQuery . '&z=16&ie=UTF8&output=embed';
+$mapsLinkUrl = 'https://www.google.com/maps/search/?api=1&query=' . $mapsQuery;
 $pageTitle = 'Sunay Soğutma | Mersin Klima & Kombi Bakım, Onarım, Satış ve Temizlik';
 $pageDescription = 'Sunay Soğutma — Mersin\'de klima ve kombi bakım, onarım, satış ve temizlik hizmetleri. Hızlı servis, uzman ekip. Hemen arayın: +90 507 732 25 90';
 $ogImage = $siteUrl . 'assets/img/hero.jpg';
@@ -46,9 +52,12 @@ $jsonLd = [
     'description' => $pageDescription,
     'address' => [
         '@type' => 'PostalAddress',
-        'addressLocality' => $city,
+        'streetAddress' => $streetAddress,
+        'addressLocality' => $district,
+        'addressRegion' => $city,
         'addressCountry' => 'TR',
     ],
+    'hasMap' => $mapsLinkUrl,
     'areaServed' => [
         '@type' => 'City',
         'name' => $city,
@@ -284,8 +293,8 @@ $jsonLd = [
               <a href="<?= htmlspecialchars($whatsappUrl, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer">Mesaj gönder</a>
             </li>
             <li>
-              <span class="contact-label">Bölge</span>
-              <span><?= htmlspecialchars($city, ENT_QUOTES, 'UTF-8') ?></span>
+              <span class="contact-label">Adres</span>
+              <a href="<?= htmlspecialchars($mapsLinkUrl, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($fullAddress, ENT_QUOTES, 'UTF-8') ?></a>
             </li>
           </ul>
           <div class="contact-actions">
@@ -295,8 +304,8 @@ $jsonLd = [
         </div>
         <div class="contact-map reveal">
           <iframe
-            title="Sunay Soğutma — Mersin konum haritası"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102297.06179893918!2d34.53182714999999!3d36.79554035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527e6d5df9ef44f%3A0x5a2a1a0b2a3f1a2b!2zTWVyc2lu!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+            title="Sunay Soğutma — <?= htmlspecialchars($fullAddress, ENT_QUOTES, 'UTF-8') ?> konum haritası"
+            src="<?= htmlspecialchars($mapsEmbedUrl, ENT_QUOTES, 'UTF-8') ?>"
             width="600"
             height="450"
             style="border:0;"
@@ -320,6 +329,7 @@ $jsonLd = [
         <a href="#galeri">Galeri</a>
         <a href="#iletisim">İletişim</a>
       </nav>
+      <p class="footer-meta"><?= htmlspecialchars($fullAddress, ENT_QUOTES, 'UTF-8') ?></p>
       <p class="footer-meta">&copy; <?= date('Y') ?> Sunay Soğutma. Tüm hakları saklıdır.</p>
     </div>
   </footer>
