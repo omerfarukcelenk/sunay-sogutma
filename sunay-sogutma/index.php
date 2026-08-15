@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 $siteName = 'Sunay Soğutma';
-$siteUrl = 'https://omerfarukcelenk.com/sunay-sogutma/';
+$siteUrl = 'https://www.sunaysogutma.com/';
 $phoneDisplay = '+90 533 371 66 14';
 $phoneTel = '+905333716614';
 $email = 'info@sunaysogutma.com';

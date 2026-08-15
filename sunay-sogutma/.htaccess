@@ -2,6 +2,13 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Force https + www canonical host
+  RewriteCond %{HTTP_HOST} ^sunaysogutma\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.sunaysogutma.com/$1 [R=301,L]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://www.sunaysogutma.com/$1 [R=301,L]
+
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^$ index.php [L]

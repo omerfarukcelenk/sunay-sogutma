@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy to Hostinger via FTP
+      - name: Deploy to sunaysogutma.com via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -29,7 +29,7 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./sunay-sogutma/
-          server-dir: /domains/omerfarukcelenk.com/public_html/sunay-sogutma/
+          server-dir: /httpdocs/
           dangerous-clean-slate: false
           dry-run: ${{ inputs.dry_run }}
           log-level: standard
