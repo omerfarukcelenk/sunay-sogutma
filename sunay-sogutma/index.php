@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 $siteName = 'Sunay Soğutma';
 $siteUrl = 'https://omerfarukcelenk.com/sunay-sogutma/';
-$phoneDisplay = '+90 507 732 25 90';
-$phoneTel = '+905077322590';
+$phoneDisplay = '+90 533 371 66 14';
+$phoneTel = '+905333716614';
 $email = 'info@sunaysogutma.com';
-$whatsappUrl = 'https://wa.me/905077322590?text=' . rawurlencode('Merhaba, Sunay Soğutma hizmetleri hakkında bilgi almak istiyorum.');
+$whatsappUrl = 'https://wa.me/905333716614?text=' . rawurlencode('Merhaba, Sunay Soğutma hizmetleri hakkında bilgi almak istiyorum.');
 $city = 'Mersin';
 $district = 'Yenişehir';
 $streetAddress = 'Palmiye Mah. 1223 Sk. Milas Apt. No: 4/A';
@@ -15,7 +15,7 @@ $mapsQuery = rawurlencode('Palmiye Mahallesi 1223 Sokak Milas Apartmanı No:4 Ye
 $mapsEmbedUrl = 'https://maps.google.com/maps?q=' . $mapsQuery . '&z=16&ie=UTF8&output=embed';
 $mapsLinkUrl = 'https://www.google.com/maps/search/?api=1&query=' . $mapsQuery;
 $pageTitle = 'Sunay Soğutma | Mersin Klima & Kombi Bakım, Onarım, Satış ve Temizlik';
-$pageDescription = 'Sunay Soğutma — Mersin\'de klima ve kombi bakım, onarım, satış ve temizlik hizmetleri. Hızlı servis, uzman ekip. Hemen arayın: +90 507 732 25 90';
+$pageDescription = 'Sunay Soğutma — Mersin\'de klima ve kombi bakım, onarım, satış ve temizlik hizmetleri. Hızlı servis, uzman ekip. Hemen arayın: +90 533 371 66 14';
 $ogImage = $siteUrl . 'assets/img/hero.jpg';
 
 $klimaServices = [
