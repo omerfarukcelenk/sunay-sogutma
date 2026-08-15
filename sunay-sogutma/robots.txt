@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://omerfarukcelenk.com/sunay-sogutma/sitemap.xml
+Sitemap: https://www.sunaysogutma.com/sitemap.xml
