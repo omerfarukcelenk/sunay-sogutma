@@ -1,0 +1,41 @@
+name: Deploy Sunay Soğutma (FTP)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (dosya yükleme, sadece fark listesi)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy-sunay-sogutma-ftp
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: FTP Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          local-dir: ./sunay-sogutma/
+          server-dir: /domains/omerfarukcelenk.com/public_html/sunay-sogutma/
+          dangerous-clean-slate: false
+          dry-run: ${{ inputs.dry_run }}
+          log-level: standard
+          timeout: 60000
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store
