@@ -7,9 +7,9 @@ $phoneDisplay = '+90 507 732 25 90';
 $phoneTel = '+905077322590';
 $email = 'info@sunaysogutma.com';
 $whatsappUrl = 'https://wa.me/905077322590?text=' . rawurlencode('Merhaba, Sunay Soğutma hizmetleri hakkında bilgi almak istiyorum.');
-$city = 'İstanbul';
-$pageTitle = 'Sunay Soğutma | Klima & Kombi Bakım, Onarım, Satış ve Temizlik';
-$pageDescription = 'Sunay Soğutma — İstanbul\'da klima ve kombi bakım, onarım, satış ve temizlik hizmetleri. Hızlı servis, uzman ekip. Hemen arayın: +90 507 732 25 90';
+$city = 'Mersin';
+$pageTitle = 'Sunay Soğutma | Mersin Klima & Kombi Bakım, Onarım, Satış ve Temizlik';
+$pageDescription = 'Sunay Soğutma — Mersin\'de klima ve kombi bakım, onarım, satış ve temizlik hizmetleri. Hızlı servis, uzman ekip. Hemen arayın: +90 507 732 25 90';
 $ogImage = $siteUrl . 'assets/img/hero.jpg';
 
 $klimaServices = [
@@ -27,14 +27,12 @@ $kombiServices = [
 ];
 
 $gallery = [
-    ['img' => 'gallery-ac-1.jpg', 'alt' => 'Modern duvar tipi klima montajı'],
-    ['img' => 'gallery-tech-2.jpg', 'alt' => 'Teknisyen klima ve tesisat çalışması'],
-    ['img' => 'gallery-boiler-1.jpg', 'alt' => 'Kombi ve ısıtma sistemi bakımı'],
-    ['img' => 'gallery-tech-1.jpg', 'alt' => 'Endüstriyel soğutma ekipmanı kontrolü'],
-    ['img' => 'gallery-1.jpg', 'alt' => 'İç mekan klima uygulaması'],
-    ['img' => 'gallery-2.jpg', 'alt' => 'Modern yaşam alanı iklimlendirme'],
-    ['img' => 'gallery-3.jpg', 'alt' => 'Konut tipi soğutma çözümü'],
-    ['img' => 'gallery-5.jpg', 'alt' => 'Profesyonel montaj sonrası görünüm'],
+    ['img' => 'gallery-1.jpg', 'alt' => 'Klima montajı — teraziyle hassas duvar montajı'],
+    ['img' => 'gallery-2.jpg', 'alt' => 'Dış ünite montajı — Mersin apartman cephesi'],
+    ['img' => 'gallery-3.jpg', 'alt' => 'Klima gaz dolumu ve basınç kontrolü'],
+    ['img' => 'gallery-4.jpg', 'alt' => 'Kombi montajı — temiz tesisat işçiliği'],
+    ['img' => 'gallery-5.jpg', 'alt' => 'Petek ve radyatör bakım servisi'],
+    ['img' => 'gallery-6.jpg', 'alt' => 'Klima derin temizlik — yıkama körüğü ile'],
 ];
 
 $jsonLd = [
@@ -88,8 +86,8 @@ $jsonLd = [
   <meta name="description" content="<?= htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8') ?>">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Sunay Soğutma">
-  <meta name="geo.region" content="TR-34">
-  <meta name="geo.placename" content="İstanbul">
+  <meta name="geo.region" content="TR-33">
+  <meta name="geo.placename" content="Mersin">
   <link rel="canonical" href="<?= htmlspecialchars($siteUrl, ENT_QUOTES, 'UTF-8') ?>">
 
   <meta property="og:type" content="website">
@@ -142,8 +140,8 @@ $jsonLd = [
         <img
           src="./assets/img/hero.jpg"
           alt="Profesyonel klima ve soğutma servisi"
-          width="1920"
-          height="1280"
+          width="1536"
+          height="1024"
           fetchpriority="high"
           decoding="async"
         >
@@ -176,8 +174,8 @@ $jsonLd = [
                   <img
                     src="./assets/img/<?= htmlspecialchars($service['img'], ENT_QUOTES, 'UTF-8') ?>"
                     alt="<?= htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8') ?>"
-                    width="800"
-                    height="534"
+                    width="1200"
+                    height="800"
                     loading="lazy"
                     decoding="async"
                   >
@@ -198,8 +196,8 @@ $jsonLd = [
                   <img
                     src="./assets/img/<?= htmlspecialchars($service['img'], ENT_QUOTES, 'UTF-8') ?>"
                     alt="<?= htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8') ?>"
-                    width="800"
-                    height="534"
+                    width="1200"
+                    height="800"
                     loading="lazy"
                     decoding="async"
                   >
@@ -254,7 +252,7 @@ $jsonLd = [
                 src="./assets/img/<?= htmlspecialchars($item['img'], ENT_QUOTES, 'UTF-8') ?>"
                 alt="<?= htmlspecialchars($item['alt'], ENT_QUOTES, 'UTF-8') ?>"
                 width="900"
-                height="600"
+                height="900"
                 loading="lazy"
                 decoding="async"
                 fetchpriority="low"
@@ -297,8 +295,8 @@ $jsonLd = [
         </div>
         <div class="contact-map reveal">
           <iframe
-            title="Sunay Soğutma — İstanbul konum haritası"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385398.5897809314!2d28.731994!3d41.0053702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+            title="Sunay Soğutma — Mersin konum haritası"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102297.06179893918!2d34.53182714999999!3d36.79554035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527e6d5df9ef44f%3A0x5a2a1a0b2a3f1a2b!2zTWVyc2lu!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
             width="600"
             height="450"
             style="border:0;"
