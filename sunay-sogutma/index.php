@@ -14,8 +14,8 @@ $fullAddress = $streetAddress . ' ' . $district . '/' . $city;
 $mapsQuery = rawurlencode('Palmiye Mahallesi 1223 Sokak Milas Apartmanı No:4 Yenişehir Mersin');
 $mapsEmbedUrl = 'https://maps.google.com/maps?q=' . $mapsQuery . '&z=16&ie=UTF8&output=embed';
 $mapsLinkUrl = 'https://www.google.com/maps/search/?api=1&query=' . $mapsQuery;
-$pageTitle = 'Sunay Soğutma | Mersin Klima & Kombi Bakım, Onarım, Satış ve Temizlik';
-$pageDescription = 'Sunay Soğutma — Mersin\'de klima ve kombi bakım, onarım, satış ve temizlik hizmetleri. Hızlı servis, uzman ekip. Hemen arayın: +90 533 371 66 14';
+$pageTitle = 'Sunay Soğutma | Mersin Klima, Kombi, VRF ve Havalandırma Sistemleri';
+$pageDescription = 'Sunay Soğutma — Mersin\'de klima, kombi, VRF sistemleri ve havalandırma: bakım, onarım, satış, temizlik ve montaj. Hızlı servis, uzman ekip. Hemen arayın: +90 533 371 66 14';
 $ogImage = $siteUrl . 'assets/img/hero.jpg';
 
 $klimaServices = [
@@ -30,6 +30,13 @@ $kombiServices = [
     ['slug' => 'kombi-onarim', 'title' => 'Kombi Onarım', 'desc' => 'Su kaçakları, basınç ve ısıtma sorunlarında uzman kombi onarımı.', 'img' => 'service-kombi-onarim.jpg'],
     ['slug' => 'kombi-satis', 'title' => 'Kombi Satış', 'desc' => 'Doğru kapasitede kombi satışı, kurulum ve ilk çalıştırma.', 'img' => 'service-kombi-satis.jpg'],
     ['slug' => 'kombi-temizlik', 'title' => 'Kombi Temizlik', 'desc' => 'Eşanjör ve tesisat temizliği ile sessiz, verimli kombi performansı.', 'img' => 'service-kombi-temizlik.jpg'],
+];
+
+$vrfServices = [
+    ['slug' => 'vrf-sistemleri', 'title' => 'VRF Sistemleri', 'desc' => 'İşyeri, otel ve site projeleri için VRF sistem kurulumu ve devreye alma.', 'img' => 'service-vrf-sistem.jpg'],
+    ['slug' => 'vrf-bakim-onarim', 'title' => 'VRF Bakım & Onarım', 'desc' => 'VRF dış ve iç ünitelerde periyodik bakım, arıza tespiti ve onarım.', 'img' => 'service-vrf-bakim.jpg'],
+    ['slug' => 'havalandirma-sistemleri', 'title' => 'Havalandırma Sistemleri', 'desc' => 'Kanal tipi havalandırma projelendirme, imalat ve montaj hizmeti.', 'img' => 'service-havalandirma.jpg'],
+    ['slug' => 'havalandirma-montaj', 'title' => 'Havalandırma Montaj & Bakım', 'desc' => 'Menfez, fan ve kanal montajı; periyodik temizlik ve bakım.', 'img' => 'service-havalandirma-montaj.jpg'],
 ];
 
 $gallery = [
@@ -72,7 +79,7 @@ $jsonLd = [
     'sameAs' => [$whatsappUrl],
     'hasOfferCatalog' => [
         '@type' => 'OfferCatalog',
-        'name' => 'Klima ve Kombi Hizmetleri',
+        'name' => 'Klima, Kombi, VRF ve Havalandırma Hizmetleri',
         'itemListElement' => array_map(static function (array $s): array {
             return [
                 '@type' => 'Offer',
@@ -82,7 +89,7 @@ $jsonLd = [
                     'description' => $s['desc'],
                 ],
             ];
-        }, array_merge($klimaServices, $kombiServices)),
+        }, array_merge($klimaServices, $kombiServices, $vrfServices)),
     ],
 ];
 ?>
@@ -171,7 +178,7 @@ $jsonLd = [
       <div class="container">
         <header class="section-head reveal">
           <h2 id="hizmetler-title">Hizmetlerimiz</h2>
-          <p>Klima ve kombide uçtan uca çözüm: bakım, onarım, satış ve temizlik.</p>
+          <p>Klima, kombi, VRF ve havalandırmada uçtan uca çözüm: bakım, onarım, satış, temizlik ve montaj.</p>
         </header>
 
         <div class="service-block reveal">
@@ -217,6 +224,28 @@ $jsonLd = [
             <?php endforeach; ?>
           </div>
         </div>
+
+        <div class="service-block reveal">
+          <h3 class="service-group-title">VRF &amp; Havalandırma</h3>
+          <div class="service-grid">
+            <?php foreach ($vrfServices as $service): ?>
+              <article class="service-item" id="<?= htmlspecialchars($service['slug'], ENT_QUOTES, 'UTF-8') ?>">
+                <div class="service-visual">
+                  <img
+                    src="./assets/img/<?= htmlspecialchars($service['img'], ENT_QUOTES, 'UTF-8') ?>"
+                    alt="<?= htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8') ?>"
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+                <h4><?= htmlspecialchars($service['title'], ENT_QUOTES, 'UTF-8') ?></h4>
+                <p><?= htmlspecialchars($service['desc'], ENT_QUOTES, 'UTF-8') ?></p>
+              </article>
+            <?php endforeach; ?>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -229,7 +258,7 @@ $jsonLd = [
         <ul class="why-list">
           <li>
             <strong>Uzman teknik ekip</strong>
-            <span>Klima ve kombi sistemlerinde deneyimli servis.</span>
+            <span>Klima, kombi, VRF ve havalandırma sistemlerinde deneyimli servis.</span>
           </li>
           <li>
             <strong>Hızlı müdahale</strong>
